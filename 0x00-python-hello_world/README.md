@@ -1,1 +1,1 @@
-2. Hello, print
+3. Print integer
