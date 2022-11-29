@@ -1,1 +1,1 @@
-9. Easter Egg
+10. Linked list cycle
