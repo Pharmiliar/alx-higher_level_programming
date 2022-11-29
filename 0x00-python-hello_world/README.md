@@ -1,1 +1,1 @@
-5. Print string
+6. Play with strings
