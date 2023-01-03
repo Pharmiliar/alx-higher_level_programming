@@ -87,7 +87,7 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("height must be >= 0")raise ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -99,54 +99,56 @@ class Rectangle:
 
         """
 
+        return self.width * self.height
 
-        def perimeter(self):
-            """ Method that calculates the Rectangle perimeter
+    def perimeter(self):
+        """ Method that calculates the Rectangle perimeter
 
-            Returns:
-                rectangle perimeter
-
-
-            """
-
-            if self.width == 0 or self.height == 0:
-                return 0
-
-            return (2 * self.width) + (2 * self.height)
-
-        def __str__(self):
-            """ Method that returns the Rectangle #
-
-            Returns:
-                str of the rectangle
-
-            """
-
-            rectangle = ""
-
-            if self.width == 0 or self.height == 0:
-                return rectangle
-
-            for i in range(self.height):
-                rectangle += ("#" * self.width) + "\n"
-
-            return rectangle[:-1]
-
-        def __repr__(self):
-            """ Method that returns the string represantion of the instance
-
-            Returns:
-                string represenation of the object
-
-            """
-
-            return "Rectangle({:d}, {:d})".format(self.width, self.height)
-
-        def __del__(self):
-            """ Method that prints a message when the instance is deleted
+        Returns:
+            rectangle perimeter
 
 
-            """
+        """
 
-            Rectangle.number_of_instances -= 1
-            print("Bye rectangle...")
+        if self.width == 0 or self.height == 0:
+            return 0
+
+        return (2 * self.width) + (2 * self.height)
+
+    def __str__(self):
+
+        """ Method that returns the Rectangle #
+
+        Returns:
+            str of the rectangle
+
+        """
+
+        rectangle = ""
+
+        if self.width == 0 or self.height == 0:
+            return rectangle
+
+        for i in range(self.height):
+            rectangle += ("#" * self.width) + "\n"
+
+        return rectangle[:-1]
+
+    def __repr__(self):
+        """ Method that returns the string represantion of the instance
+
+        Returns:
+            string represenation of the object
+
+        """
+
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+
+    def __del__(self):
+        """ Method that prints a message when the instance is deleted
+
+
+        """
+
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
