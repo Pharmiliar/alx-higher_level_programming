@@ -51,7 +51,7 @@ if __name__ == "__main__":
             except:
                 pass
             nlines += 1
-    except KeyboardInterrupt:
+        except KeyboardInterrupt:
+            magic.print_info()
+            raise
         magic.print_info()
-        raise
-    magic.print_info()
